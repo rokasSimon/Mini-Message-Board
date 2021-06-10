@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Post a message</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Post a message</h1>
+    <% if (rejected) { %>
+      <p>Submission was rejected because it didn't fill in all fields</p>
+    <% } %>
+    <form method="POST" action="/new">
+      <label for="text">Message:<label/><br>
+      <textarea name="text" id="text" required></textarea>
+      <hr>
+      <label for="user">User:<label/><br>
+      <input type="text" name="user" id="user" value="" required><br>
+      <hr>
+      <input type="submit" value="Submit">
+   </form>
+  </body>
+</html>

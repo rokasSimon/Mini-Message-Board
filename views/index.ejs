@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Message Board</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>All messages</h1>
+    <% for (let msg of messages) { %>
+      <div>
+        <p><%= msg.user %>: <span><%= msg.text %> | Posted on: <%= msg.formatDate %></span></p>
+      </div>
+    <% } %>
+    <a href="./new">Create a new message</a>
+  </body>
+</html>

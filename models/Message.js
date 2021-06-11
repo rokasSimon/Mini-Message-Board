@@ -9,9 +9,6 @@ const MessageSchema = new Schema(
     }
 );
 
-let d = new Date();
-d.h
-
 MessageSchema
     .virtual('formatDate')
     .get(function() {
